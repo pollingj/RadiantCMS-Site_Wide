@@ -1,3 +1,11 @@
 = Site Wide
 
-Description goes here
+Provides site wide data, for use on things like fields like authors, copyright statements etc where you don't want editors touching HTML
+
+== Usage
+
+<r:site_wide keyname="Author" />
+
+This would output the value associated to the key "Author"
+
+If an invalid keyname is entered then a error message is display
