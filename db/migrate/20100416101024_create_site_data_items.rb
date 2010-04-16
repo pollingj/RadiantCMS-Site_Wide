@@ -1,7 +1,7 @@
 class CreateSiteDataItems < ActiveRecord::Migration
   def self.up
     create_table :site_data_items do |t|
-      t.string :key
+      t.string :keyname
       t.string :value
 
       t.timestamps

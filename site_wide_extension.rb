@@ -2,8 +2,8 @@
 # require_dependency 'application_controller'
 
 class SiteWideExtension < Radiant::Extension
-  version "1.0"
-  description "Used to generate site wide properties"
+  version "0.1"
+  description "Used to generate site wide properties. A simple key/value store"
   url "http://theled.co.uk"
   
   define_routes do |map|
@@ -14,7 +14,7 @@ class SiteWideExtension < Radiant::Extension
   
   def activate
     admin.tabs.add "Site Wide", "/admin/site_data_items", :after => "Layouts", :visibility => [:all]
-    #Page.send :include, SiteWideTags
+    Page.send :include, SiteWideTags
   end
   
   def deactivate

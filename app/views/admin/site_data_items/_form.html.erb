@@ -3,8 +3,8 @@
     <div class='form-area'>
       <% form_for [:admin, @site_data_item] do |form|%>
         <p class='title'>
-          <%= form.label :key, 'Key' %>
-          <%= form.text_field :key, :class => 'textbox', :maxlength => 255 %>
+          <%= form.label :keyname, 'Key' %>
+          <%= form.text_field :keyname, :class => 'textbox', :maxlength => 255 %>
         </p>
         <p class='label'>
           <%= form.label :value %>

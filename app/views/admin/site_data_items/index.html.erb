@@ -15,8 +15,7 @@
     <% @site_data_items.each do |item| %>
       <tr class="node level-1">
         <td class="link">
-          <%# image('links/link') %>
-          <%= link_to item.key, edit_admin_site_data_item_url(:id => item.id) %>
+          <%= link_to item.keyname, edit_admin_site_data_item_url(:id => item.id) %>
         </td>
         <td class="remove">
           <%= link_to image('remove', :alt => 'Remove link'), remove_admin_site_data_item_url(:id => item.id) %>
