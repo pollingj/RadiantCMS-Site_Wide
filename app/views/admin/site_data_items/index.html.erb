@@ -1,0 +1,30 @@
+<h1>Site Wide Values</h1>
+
+<p>You can enter site wide values here, which will show up on the public side of your website.</p>
+
+<table cellspacing="0" cellpadding="0" border="0" class="index">
+
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th class="modify">Modify</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @site_data_items.each do |item| %>
+      <tr class="node level-1">
+        <td class="link">
+          <%# image('links/link') %>
+          <%= link_to item.key, edit_admin_site_data_item_url(:id => item.id) %>
+        </td>
+        <td class="remove">
+          <%= link_to image('remove', :alt => 'Remove link'), remove_admin_site_data_item_url(:id => item.id) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+<p><%= link_to image('plus', :alt => "New link"), {:action => :new} %></p>

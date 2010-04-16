@@ -1,0 +1,23 @@
+<div id='main'>
+  <div id='content'>
+    <div class='form-area'>
+      <% form_for [:admin, @site_data_item] do |form|%>
+        <p class='title'>
+          <%= form.label :key, 'Key' %>
+          <%= form.text_field :key, :class => 'textbox', :maxlength => 255 %>
+        </p>
+        <p class='label'>
+          <%= form.label :value %>
+          <%= form.text_field :value, :class => 'textbox', :maxlength => 255 %>
+        </p>
+        <br />
+        <p class="buttons">
+          <%= save_model_button(@site_data_item) %>
+          <%= save_model_and_continue_editing_button(@site_data_item) %>
+          or
+          <%= link_to "Cancel", {:action => :index} %>
+        </p>
+		<%end%>
+    </div>
+  </div>
+</div>
